@@ -42,6 +42,8 @@ function onGetTheatres(xml) {
     console.log(theatres);
 }
 
+
+
 $('#myDropdown').change(function() {
     var id2 = $(this).children(":selected").attr("id");
     console.log(id2);
@@ -55,6 +57,8 @@ function getOptionMovies(theatreId) {
           'success': onOptionData
     });
 }
+
+
 
 function onOptionData(xml) {
     //var xmlText = new XMLSerializer().serializeToString(xml);
@@ -79,9 +83,21 @@ function onOptionData(xml) {
         var alkuAikaNew = alkuAika.slice(11, 16);
         var loppuAikaNew = loppuAika.slice(11, 16);
         movie.alkuAikaNew = alkuAikaNew;
-        movie.loppuAikaNew = loppuAikaNew;
+        movie.loppuAikaNew = loppuAikaNew
         
-        $('#moovies').append('<img src="'+kuva+'"><h3>'+title+' - <i>'+orgTitle+'</i> </h3><p>Genret : '+genre+'<br> Time: '+alkuAikaNew+' - '+loppuAikaNew+'</p><hr>');
+        $('#myGenre').change(function() {
+            var genre2 = $(this).children(":selected").attr("id");
+            console.log(genre2);
+            getOptionGenres(genre2);
+        });
+        
+        function getOptionGenres(genre3){
+            //$('#moovies').empty();
+            if (genre.includes(genre3)) {
+            $('#moovies').append('<img src="'+kuva+'"><h3>'+title+' - <i>'+orgTitle+'</i> </h3><p>Genres : '+genre+'<br> Time: '+alkuAikaNew+' - '+loppuAikaNew+'</p><hr>');
+            } 
+        }
+        
     });
 }
 getTheatres();

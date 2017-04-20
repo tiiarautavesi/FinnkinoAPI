@@ -253,6 +253,20 @@ li a:hover {
     padding-left: 2%;
 }
 
+.p3 {
+    width: 57%;
+}
+
+.p4 {
+    width: 39%;
+    padding-left: 2%;
+}
+
+.p5 {
+    width: 45%;
+    padding-right: 2%;
+}
+
 .photos img {
     width: 100%;
 }
@@ -301,4 +315,10 @@ select {
     float: left;
     padding-right: 20px;
     padding-bottom: 10px;
+}
+
+#finnkino hr {
+    padding: 0;
+    margin: 0;
+    opacity: 0;
 }
