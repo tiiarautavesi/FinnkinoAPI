@@ -5,3 +5,4 @@ Tehtävä: 18.4. Oman Finnkino-sivun rakentaminen
 Tehtävän anto: https://gist.github.com/OAlm/eaf2236fa67bc801fc4e01a6fbe2f64c
 
 Genre-haku toimii hieman jäisesti
+Valmis hakukone: https://users.metropolia.fi/~tiiaraut/portfolio/finnkino.html
